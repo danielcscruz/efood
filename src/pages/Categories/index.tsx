@@ -1,4 +1,4 @@
-import ProductsList from '../../components/ProductsList'
+import ProductsList from '../../components/RestaurantsList'
 
 import resident from '../../assets/images/resident.png'
 import diablo from '../../assets/images/diablo.png'
@@ -94,10 +94,7 @@ const em_breve: Game[] = [
 
 const Home = () => (
   <>
-    <ProductsList games={promocoes} title="RPG" background="gray" />
-    <ProductsList games={em_breve} title="Ação" background="black" />
-    <ProductsList games={promocoes} title="Aventura" background="gray" />
-    <ProductsList games={em_breve} title="FPS" background="black" />
+    <h3>Product list</h3>
   </>
 )
 

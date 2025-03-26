@@ -1,24 +1,44 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const HeaderBar = styled.header`
-  background-color: ${cores.cinza};
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 80px;
+import fundo from '../../assets/images/fundo.png'
+
+export const Container = styled.div`
+  background: url(${fundo});
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  heigh: 100%;
+  color: ${cores.rosinha};
+`
+
+export const Logo = styled.img`
+  flex-direction: column;
+  width: 125px;
+  height: 58px;
+`
+export const NavBar = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  max-width: 2080px;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
 
-  a {
-    color: ${cores.branca};
-    text-decoration: none;
-    font-weight: bold;
+  /* Forces spacing for left and right elements */
+  & > h3,
+  & > div {
+    flex: 1; /* Takes equal space */
+    display: flex;
+    justify-content: center;
   }
 
-  div {
-    display: flex;
-    align-items: center;
+  /* Ensures the logo stays centered */
+  & > ${Logo} {
+    flex-shrink: 0;
   }
 `
 export const Links = styled.ul`
@@ -34,4 +54,12 @@ export const LinkCart = styled.a`
   img {
     margin-left: 16px;
   }
+`
+export const Subtitulo = styled.h3`
+  font-weight: bold;
+  font-size: 36px;
+
+  margin-top: 140px;
+  margin-bottom: 40px;
+  text-align: center;
 `

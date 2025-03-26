@@ -1,12 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  branca: '#eee',
+  branca: '#fff',
   preta: '#111',
   cinza: '#333',
   verde: '#10AC84',
   vermelho: '#FF0000',
-  cinzaClaro: '#A3A3A3'
+  cinzaClaro: '#A3A3A3',
+  rosinha: '#E66767',
+  begeClaro: '#FFF8F2',
+  begeEscuro: '#FFEBD9'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -18,14 +21,13 @@ export const GlobalCss = createGlobalStyle`
         list-style: none;
     }
     body {
-        background-color: ${cores.preta};
+        background-color: ${cores.begeEscuro};
         color: ${cores.branca};
-        padding-top: 40px;
 
     }
 
     .container {
-        max-width: 1024px;
+        max-width: 100vw;
         width: 100%;
         margin: 0 auto;
     }

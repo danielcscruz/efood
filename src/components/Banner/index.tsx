@@ -1,29 +1,18 @@
-import { Imagem, Titulo, Precos } from './styles'
+import { Category, Container, Store } from './styles'
 
-import spider from '../../assets/images/spider.png'
-import Tag from '../Tag'
-import Button from '../Button'
+type Props = {
+  name: string
+  category: string
+  image: string
+}
 
-const Banner = () => (
-  <Imagem style={{ backgroundImage: `url(${spider})` }}>
-    <div className="container">
-      <Tag size="big">Destaque do Dia</Tag>
-      <div>
-        <Titulo>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Titulo>
-        <Precos>
-          De <span>R$ 250,00</span> <br />
-          por apenas R$ 99,90
-        </Precos>
-      </div>
-      <Button
-        type="link"
-        to="/produto"
-        title="Clique aqui para aproveitar essa oferta"
-      >
-        Aproveitar
-      </Button>
-    </div>
-  </Imagem>
-)
+const Banner = ({ name, category, image }: Props) => {
+  return (
+    <Container image={image}>
+      <Category>{category}</Category>
+      <Store>{name}</Store>
+    </Container>
+  )
+}
 
 export default Banner

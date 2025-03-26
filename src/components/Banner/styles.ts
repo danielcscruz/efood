@@ -1,37 +1,24 @@
 import styled from 'styled-components'
-import { TagContainer } from '../Tag/styles'
 
-export const Imagem = styled.div`
-  width: 100%;
-  height: 560px;
-  display: block;
-  background-repeat: no-repeat;
+import pasta from '../../assets/images/pasta.png'
+
+export const Container = styled.div<{ image: string }>`
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${(props) => props.image});
   background-size: cover;
-  font-weight: bold;
-
-  .container {
-    position: relative;
-    padding-top: 340px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  ${TagContainer} {
-    position: absolute;
-    top: 32px;
-  }
+  background-position: center;
+  height: 280px;
+  width: 100%;
+  font-size: 32px;
+`
+export const Category = styled.h3`
+  font-weight: 100;
+  padding-top: 25px;
+  padding-left: 127px;
 `
 
-export const Titulo = styled.h2`
-  font-size: 36px;
-  max-width: 450px;
-`
-export const Precos = styled.p`
-  font-size: 24px;
-  margin-top: 24px;
-
-  span {
-    text-decoration: line-through;
-  }
+export const Store = styled.h2`
+  font-weight: 900;
+  padding-top: 120px;
+  padding-left: 127px;
 `
