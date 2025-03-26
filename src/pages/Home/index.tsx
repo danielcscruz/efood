@@ -28,25 +28,10 @@ const lista: Restaurant[] = [
     category: 'Japonesa',
     dishes: [
       {
-        id: 7,
-        name: 'Sushi',
-        description: 'suuuuuuuushi',
-        serve: '1 a 2 pessoas',
-        price: 99.9,
-        image: sushi
-      },
-      {
-        id: 8,
-        name: 'Temaki',
-        description: 'temakiiiiiii',
-        serve: '1 a 2 pessoas',
-        price: 99.9,
-        image: temaki
-      },
-      {
         id: 20,
         name: 'Sushi',
-        description: 'suuuuuuuushi',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
         serve: '1 a 2 pessoas',
         price: 99.9,
         image: sushi
@@ -54,7 +39,8 @@ const lista: Restaurant[] = [
       {
         id: 21,
         name: 'Temaki',
-        description: 'temakiiiiiii',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
         serve: '1 a 2 pessoas',
         price: 99.9,
         image: temaki
@@ -84,7 +70,7 @@ const lista: Restaurant[] = [
         id: 10,
         name: 'Pizza Marguerita',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
+          'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
         serve: '2 a 3 pessoas',
         price: 60.9,
         image: pizza
@@ -93,7 +79,7 @@ const lista: Restaurant[] = [
         id: 22,
         name: 'Pizza Marguerita',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
+          'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
         serve: '2 a 3 pessoas',
         price: 60.9,
         image: pizza
@@ -102,7 +88,7 @@ const lista: Restaurant[] = [
         id: 23,
         name: 'Pizza Marguerita',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
+          'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
         serve: '2 a 3 pessoas',
         price: 60.9,
         image: pizza
@@ -111,7 +97,7 @@ const lista: Restaurant[] = [
         id: 24,
         name: 'Pizza Marguerita',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
+          'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
         serve: '2 a 3 pessoas',
         price: 60.9,
         image: pizza
@@ -120,7 +106,7 @@ const lista: Restaurant[] = [
         id: 25,
         name: 'Pizza Marguerita',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero aliquam reprehenderit inventore laudantium accusantium quae harum fugit assumenda, amet necessitatibus facere.',
+          'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
         serve: '2 a 3 pessoas',
         price: 60.9,
         image: pizza
