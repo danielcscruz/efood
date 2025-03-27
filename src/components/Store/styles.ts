@@ -45,10 +45,10 @@ export const Rate = styled.div`
   }
 `
 export const Descricao = styled.p`
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 20px;
   display: block;
-  margin: 0 8px;
+  margin: 0 6px;
   margin-top: 16px;
   margin-bottom: 8px;
 `
@@ -75,4 +75,7 @@ export const Botao = styled.button`
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
 `

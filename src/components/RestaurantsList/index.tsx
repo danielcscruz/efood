@@ -1,4 +1,4 @@
-import Restaurant from '../../models/Restaurants'
+import { Restaurant } from '../../pages/Home'
 import Store from '../Store'
 import { Container, List } from './styles'
 
@@ -13,13 +13,12 @@ const RestaurantsList = ({ restaurants }: Props) => (
         {restaurants.map((restaurant) => (
           <Store
             key={restaurant.id}
-            name={restaurant.name}
-            description={restaurant.description}
-            image={restaurant.image}
-            rating={restaurant.rating}
-            category={restaurant.category}
-            dishes={restaurant.dishes}
-            featured={restaurant.featured || false}
+            name={restaurant.titulo}
+            description={restaurant.descricao}
+            image={restaurant.capa}
+            rating={restaurant.avaliacao}
+            category={restaurant.tipo}
+            featured={restaurant.destacado || false}
             id={restaurant.id}
           />
         ))}

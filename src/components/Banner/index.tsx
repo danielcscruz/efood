@@ -1,16 +1,15 @@
+import { Restaurant } from '../../pages/Home'
 import { Category, Container, Store } from './styles'
 
 type Props = {
-  name: string
-  category: string
-  image: string
+  restaurant: Restaurant
 }
 
-const Banner = ({ name, category, image }: Props) => {
+const Banner = ({ restaurant }: Props) => {
   return (
-    <Container image={image}>
-      <Category>{category}</Category>
-      <Store>{name}</Store>
+    <Container image={restaurant.capa}>
+      <Category>{restaurant.tipo}</Category>
+      <Store>{restaurant.titulo}</Store>
     </Container>
   )
 }

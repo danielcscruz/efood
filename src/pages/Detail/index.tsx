@@ -1,25 +1,23 @@
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Banner from '../../components/Banner'
 import DishList from '../../components/DishList'
-
-type Dish = {
-  id: number
-  name: string
-  description: string
-  serve: string
-  price: number
-  image: string
-}
+import { Restaurant } from '../Home'
+import { useEffect, useState } from 'react'
 
 const Detail = () => {
-  const location = useLocation()
-  const { state } = location
-  const { name, description, rating, category, dishes, image, featured } =
-    state || {}
+  const { id } = useParams()
+  const [restaurant, setRestaurant] = useState<Restaurant>()
+
+  useEffect(() => {
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+      .then((res) => res.json())
+      .then((res) => setRestaurant(res))
+  }, [id])
+
   return (
     <div>
-      <Banner name={name} category={category} image={image} />
-      <DishList dishes={dishes} />
+      {restaurant && <Banner restaurant={restaurant} />}
+      {restaurant && <DishList restaurant={restaurant} />}
     </div>
   )
 }

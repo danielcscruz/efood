@@ -20,7 +20,6 @@ type Props = {
   description: string
   rating: number
   category: string
-  dishes: Dish[]
   image: string
   featured: boolean
 }
@@ -30,7 +29,6 @@ const Store = ({
   description,
   rating,
   category,
-  dishes,
   image,
   featured,
   id
@@ -56,12 +54,7 @@ const Store = ({
     )}
 
     <Descricao>{description}</Descricao>
-    <Botao
-      as={Link}
-      to={`/restaurant/${id}`}
-      state={{ name, description, rating, category, dishes, image, featured }}
-      type="button"
-    >
+    <Botao as={Link} to={`/restaurant/${id}`} type="button">
       Saiba Mais
     </Botao>
   </Card>

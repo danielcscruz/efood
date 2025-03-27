@@ -62,3 +62,88 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
 `
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &.visivel {
+    display: flex;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.73);
+  }
+`
+export const ModalContent = styled.div`
+  background-color: ${cores.rosinha};
+  max-width: 1024px;
+  width: 100%;
+  height: 344px;
+  position: relative;
+  z-index: 1;
+
+
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+
+
+`
+export const CloseButton = styled.img`
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+`
+export const Content = styled.div`
+  display: flex;
+  margin: 32px;
+`
+
+export const ImageModal = styled.img`
+  height: 280px;
+  width: 280px;
+`
+export const TextContent = styled.div`
+  margin-left: 32px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  h3,
+  h4 {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+`
+export const BtnModal = styled.button`
+  margin-top: 16px;
+  background-color: ${cores.begeClaro};
+  color: ${cores.rosinha};
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 7px;
+  cursor: pointer;
+`
