@@ -139,7 +139,7 @@ export const TextContent = styled.div`
 `
 export const BtnModal = styled.button`
   margin-top: 16px;
-  background-color: ${cores.begeClaro};
+  background-color: ${cores.begeEscuro};
   color: ${cores.rosinha};
   border: none;
   font-size: 14px;
