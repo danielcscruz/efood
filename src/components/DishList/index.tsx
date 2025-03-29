@@ -18,6 +18,8 @@ import {
 import close from '../../assets/images/close.png'
 import { Restaurant } from '../../pages/Home'
 import { useState } from 'react'
+import { add, open } from '../../store/reducers/cart'
+import { useDispatch } from 'react-redux'
 
 type Props = {
   restaurant: Restaurant
@@ -29,17 +31,39 @@ type ModalState = {
   titulo: string
   descricao: string
   serve: string
+  id: number | null
   preco: number | null
 }
 
 const DishList = ({ restaurant }: Props) => {
+  const dispatch = useDispatch()
+
+  const addCart = () => {
+    if (modal.preco !== null && modal.id !== null) {
+      dispatch(
+        add({
+          restaurantId: restaurant.id,
+          item: {
+            id: modal.id, // Assuming titulo is a unique name, use prato.id if available
+            nome: modal.titulo,
+            preco: modal.preco,
+            foto: modal.imagem,
+            descricao: modal.descricao,
+            porcao: modal.serve
+          }
+        })
+      )
+      dispatch(open())
+    }
+  }
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     imagem: '',
     titulo: '',
     descricao: '',
     serve: '',
-    preco: null
+    preco: null,
+    id: null
   })
   const closeModal = () => {
     setModal({
@@ -48,7 +72,8 @@ const DishList = ({ restaurant }: Props) => {
       titulo: '',
       descricao: '',
       serve: '',
-      preco: null
+      preco: null,
+      id: null
     })
   }
 
@@ -89,7 +114,8 @@ const DishList = ({ restaurant }: Props) => {
                     titulo: prato.nome,
                     descricao: prato.descricao,
                     serve: prato.porcao,
-                    preco: prato.preco
+                    preco: prato.preco,
+                    id: prato.id
                   })
                 }}
                 type="button"
@@ -113,7 +139,7 @@ const DishList = ({ restaurant }: Props) => {
               <h2>{modal.titulo}</h2>
               <h3>{modal.descricao}</h3>
               <h4>{modal.serve}</h4>
-              <BtnModal type="button">
+              <BtnModal onClick={addCart} type="button">
                 Adicionar ao carrinho - {formatPreco(modal.preco)}
               </BtnModal>
             </TextContent>
@@ -126,3 +152,6 @@ const DishList = ({ restaurant }: Props) => {
 }
 
 export default DishList
+function dispatch(arg0: any) {
+  throw new Error('Function not implemented.')
+}

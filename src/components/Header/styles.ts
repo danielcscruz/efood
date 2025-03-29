@@ -28,6 +28,10 @@ export const NavBar = styled.div`
   height: 200px;
   justify-content: center;
 
+  a {
+    cursor: pointer;
+  }
+
   /* Forces spacing for left and right elements */
   & > h3,
   & > div {
@@ -48,12 +52,11 @@ export const Links = styled.ul`
 export const LinkItem = styled.li`
   margin-right: 16px;
 `
-export const LinkCart = styled.a`
-  display: flex;
-
-  img {
-    margin-left: 16px;
-  }
+export const LinkRest = styled.a`
+  font-weight: 900;
+  font-size: 18px;
+  color: ${cores.rosinha}
+  text-decoration: none;
 `
 export const Subtitulo = styled.h3`
   font-weight: bold;
