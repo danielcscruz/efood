@@ -6,19 +6,31 @@ export const Card = styled.div`
   color: ${cores.rosinha};
   position: relative;
   width: 472px;
-  height: 400px;
+  height: 412px;
   margin-top: 48px;
   border: 0.5px solid ${cores.rosinha};
   position: relative;
 `
 
 export const Titulo = styled.h3`
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  margin: 8px 8px;
+  padding: 6px 8px;
   align-items: center;
+
+  h3 {
+    font-size: 18px;
+  }
+`
+export const Rate = styled.div`
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin: 0 8px;
+  }
 `
 
 export const Cat = styled.h4`
@@ -36,20 +48,12 @@ export const Top = styled.div`
   display: flex;
 `
 
-export const Rate = styled.div`
-  display: flex;
-  align-items: center;
-
-  h3 {
-    margin: 0 8px;
-  }
-`
 export const Descricao = styled.p`
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 22px;
   display: block;
   margin: 0 6px;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 8px;
 `
 
@@ -72,7 +76,7 @@ export const Botao = styled.button`
   font-size: 14px;
   margin: 8px 8px;
   margin-top: 16px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
   position: absolute;

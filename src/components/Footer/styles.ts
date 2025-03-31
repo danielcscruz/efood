@@ -27,11 +27,7 @@ export const Container = styled.footer`
     margin: 8px 8px;
   }
 `
-export const SectionTitle = styled.h4`
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-`
+
 export const Links = styled.ul`
   display: flex;
   margin-top: 16px;

@@ -98,7 +98,7 @@ export const ModalContent = styled.div`
 
     h4 {
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 400;
     }
   }
 
