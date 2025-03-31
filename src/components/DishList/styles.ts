@@ -31,13 +31,13 @@ export const Card = styled.div`
 `
 export const Text = styled.p`
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 400;
   margin-top: 8px;
   line-height: 22px;
   text-align: left;
 `
 export const Title = styled.h3`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
   padding-top: 8px;
   text-align: left;
