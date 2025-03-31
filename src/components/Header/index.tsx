@@ -1,7 +1,14 @@
 import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { NavBar, Subtitulo, Container, Logo, LinkRest } from './styles'
+import {
+  NavBar,
+  Subtitulo,
+  Container,
+  Logo,
+  LinkRest,
+  CartLink
+} from './styles'
 import { open } from '../../store/reducers/cart'
 
 import logo from '../../assets/images/logo.png'
@@ -40,13 +47,13 @@ const Header = () => {
       ) : (
         <Container>
           <NavBar>
-            <h3>Restaurantes</h3>
+            <LinkRest to="/">Restaurantes</LinkRest>
             <Link to="/">
               <Logo src={logo} alt="eFood" />
             </Link>
-            <div>
+            <CartLink>
               <h3 onClick={openCart}>{items.length} produto(s) no carrinho</h3>
-            </div>
+            </CartLink>
           </NavBar>
         </Container>
       )}

@@ -15,10 +15,12 @@ export const Category = styled.h3`
   font-weight: 100;
   padding-top: 25px;
   padding-left: 127px;
+  font-size: 32px;
 `
 
 export const Store = styled.h2`
   font-weight: 900;
   padding-top: 120px;
   padding-left: 127px;
+  font-size: 32px;
 `

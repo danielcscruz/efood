@@ -41,7 +41,7 @@ export const SideBar = styled.aside`
 `
 
 export const Prices = styled.p`
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: ${cores.branca};
   margin-bottom: 26px;

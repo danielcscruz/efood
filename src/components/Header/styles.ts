@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 import fundo from '../../assets/images/fundo.png'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   background: url(${fundo});
@@ -28,12 +29,15 @@ export const NavBar = styled.div`
   height: 200px;
   justify-content: center;
 
-  a {
+  a,
+  h3 {
     cursor: pointer;
+    font-size: 18px;
   }
 
   /* Forces spacing for left and right elements */
   & > h3,
+  & > a,
   & > div {
     flex: 1; /* Takes equal space */
     display: flex;
@@ -52,17 +56,21 @@ export const Links = styled.ul`
 export const LinkItem = styled.li`
   margin-right: 16px;
 `
-export const LinkRest = styled.a`
+export const LinkRest = styled(Link)`
   font-weight: 900;
   font-size: 18px;
-  color: ${cores.rosinha}
+  color: ${cores.rosinha};
   text-decoration: none;
 `
 export const Subtitulo = styled.h3`
-  font-weight: bold;
+  font-weight: 900;
   font-size: 36px;
-
   margin-top: 140px;
   margin-bottom: 40px;
   text-align: center;
+`
+export const CartLink = styled.div`
+  h3 {
+    font-weight: 900;
+  }
 `
