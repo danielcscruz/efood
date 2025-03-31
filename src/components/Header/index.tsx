@@ -52,7 +52,18 @@ const Header = () => {
               <Logo src={logo} alt="eFood" />
             </Link>
             <CartLink>
-              <h3 onClick={openCart}>{items.length} produto(s) no carrinho</h3>
+              <h3 onClick={openCart}>
+                {items.reduce(
+                  (total, restaurant) =>
+                    total +
+                    restaurant.items.reduce(
+                      (sum, item) => sum + item.quantity,
+                      0
+                    ),
+                  0
+                )}{' '}
+                produto(s) no carrinho
+              </h3>
             </CartLink>
           </NavBar>
         </Container>
