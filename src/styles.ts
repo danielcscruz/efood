@@ -9,7 +9,8 @@ export const cores = {
   cinzaClaro: '#A3A3A3',
   rosinha: '#E66767',
   begeClaro: '#FFF8F2',
-  begeEscuro: '#FFEBD9'
+  begeEscuro: '#FFEBD9',
+  cinza2: '#4B4B4B'
 }
 
 export const GlobalCss = createGlobalStyle`
