@@ -116,12 +116,4 @@ export const Button = styled.button`
   text-align: center;
   justify-content: center;
   align-items: center;
-
-  &:disabled {
-    background-color: transparent;
-    color: ${cores.branca}; /* Change text color */
-    border: 1px solid ${cores.begeClaro};
-    cursor: not-allowed; /* Change cursor */
-    opacity: 0.5; /* Reduce opacity */
-  }
 `
